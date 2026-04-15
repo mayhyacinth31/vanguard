@@ -95,10 +95,124 @@ table {
 
 }
 
+
+
+header {
+    background-color: var(--black);
+    display: flex;
+    padding: 1rem;
+}
+
 h1 {
     margin: 0 auto;
-
+    color: var(--blue);
+    font-family: "Inter";
+    font-weight: bold;
+    text-align: left;
 }
+
+nav {
+    background-color: var(--black);
+    justify-items: end;
+}
+
+nav ul {
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    text-align:center;
+    max-height: 0;
+}
+
+nav h2 {
+    visibility:hidden;
+    height:1px;
+}
+
+nav li a {
+    display:block;
+    font-family: "inter";
+    font-size:1.5rem;
+    padding:1rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-decoration:none;
+    color: white;
+    transition: background-color .3s ease-in;
+}
+
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+
+/* middle line */
+label span {
+    background-color: white;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+
+/* top/bottom*/
+label span:before, label span:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: .75rem;
+}
+
+label span:after {
+    top: -.75rem;
+}
+
+input {
+  display:none;
+}
+
+/* drop down height */
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+/* middle transition */
+input:checked ~ label span {
+    background: transparent;
+}
+
+/* start x shape */
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+
+/* finish x shape */
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+
+/* location */
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+
 
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -148,6 +262,23 @@ h1 {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+
+    @media screen and (min-width: 600px){
+    nav ul {
+        overflow:visible;
+        position:absolute;
+        top: 1.5rem;
+        left:.5rem;
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    nav li a {
+        display:inline-block;
+    }
+    label span, input {
+        display:none;
+    }
+    }   
 
     #results {
         grid-template-columns: 1fr 1fr;
