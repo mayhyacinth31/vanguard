@@ -73,6 +73,10 @@ table {
     margin: 0 auto;
 }
 
+body {
+    
+}
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #innovation {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
@@ -87,7 +91,6 @@ table {
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
 .logo {
     content: "Vanguard";
-
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -97,18 +100,22 @@ table {
 
 header {
     background-color: var(--black);
+}
 
+.header {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #headbox {
-    display:inline-flex;
-    padding: 1rem;
+    background-color: var(--black);
     width: 100%;
     box-shadow: 0px 10px 10px var(--blue);
 }
 
 h1 {
-    margin: 0 auto;
+    margin: 0;
     color: var(--blue);
     font-family: "Inter";
     font-weight: bold;
@@ -116,11 +123,15 @@ h1 {
     font-size: 2rem;
     left: 0px;
     text-shadow: 0px 2px 5px var(--blue);
+    padding: 1rem;
+
 }
 
 nav {
     background-color: var(--black);
-    justify-items: end;
+    margin-left: 200px;
+    top: 10px;
+
 }
 
 nav ul {
@@ -236,8 +247,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 #blurbox {
     padding:10px;
     backdrop-filter: blur(3px);
-
-
 }
 
 #blurbox a {
@@ -252,6 +261,11 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 #blurbox a:hover {
     background-color: var(--white);
     color: var(--blue);
+}
+
+#growth {
+    background-color: var(--blue);
+    padding-bottom: 2rem;
 }
 
 /* THIS ONE IS DONE FOR YOU */
@@ -377,6 +391,53 @@ table {
     animation: stepUp 1s ease-in-out forwards;
 }
 
+
+#contact {
+    background-color: var(--black);
+    padding-bottom: 1rem;
+}
+
+#contact h2 {
+    color: var(--white);
+    padding: 2rem;
+    font-family: "Inter";
+    font-weight: bold;
+}
+
+#contact p {
+    padding-left: 1rem;
+    font-family: "Inter";
+    color: var(--white);
+}
+
+label {
+    font-family: "Inter";
+    color: var(--white);
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+
+input[type=text], textarea {
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+}
 
 /*/* MEDIA QUERIES (MEDIUM) */ 
 
