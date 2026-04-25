@@ -275,6 +275,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 
 #blurbox a {
+    display: inline-block;
     background-color: var(--blue);
     border-radius: 10px;
     padding: 1rem;
@@ -282,11 +283,12 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     color: var(--white);
     font-family: "Inter";
     animation: fade-in 0.5s ease-in-out;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #blurbox a:hover {
     background-color: var(--red);
-    transition: 0.5s ease-in-out;
+    transform: scale(1.05);
 }
 
 #growth {
@@ -330,15 +332,12 @@ p {
     border-radius: 20px;
 }
 
-@keyframes updown {
-
-    100% {
-        transform: translateY(-20px);
-    }
+#boxes section {
+    transition: transform 0.3s ease;
 }
 
 #boxes section:hover{
-    animation: updown 0.5s ease-in-out;
+    transform: translateY(-10px);
 }
 
 h3 {
@@ -360,6 +359,10 @@ h3 {
 #results {
     background-color: var(--blue);
 
+}
+
+#results h2 {
+    animation: fade-in 0.5s ease-in;
 }
 
 #results h2, #results p {
@@ -397,6 +400,10 @@ table {
 
 #growth div {
     font-family: "Inter";
+}
+
+#results h3 {
+    animation: fade-in 0.5s ease-in;
 }
 
 /* ADD ON TRANSITION ON HEIGHT */
@@ -443,6 +450,7 @@ table {
     padding: 2rem;
     font-family: "Inter";
     font-weight: bold;
+    animation: fade-in 0.5s ease-in;
 }
 
 #contact p {
@@ -479,6 +487,12 @@ input[type=submit] {
     color: var(--white);
     border-radius: 10px;
     font-family: "Inter";
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+input[type=submit]:hover{
+    transform: scale(1.03);
+    background-color: var(--red);
 }
 
 footer {
@@ -501,14 +515,17 @@ footer a {
     @media screen and (min-width: 600px){
 
     .header {
-
-        grid-template-columns: auto 1fr auto;
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        padding: 3rem 1rem 3rem 1rem;
+        width: 100%;
         align-items: center;
     }
 
     nav {
         justify-self: end;
-        justify-content: baseline;
+        display: flex;
+        min-width: max-content;
     }
 
     nav ul {
@@ -519,6 +536,8 @@ footer a {
         display: flex;
         grid-template-columns:1fr 1fr 1fr;
         max-height: none;
+        align-items: center;
+        gap: 1rem;
        
     }
     nav li a {
