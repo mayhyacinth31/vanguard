@@ -528,6 +528,7 @@ footer a {
         position: static;
         display: flex;
         max-height: none;
+        flex-wrap: nowrap;
 
     }
     nav li a {
