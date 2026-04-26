@@ -510,7 +510,7 @@ footer a {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 800px){
 
     .header {
         display: grid;
@@ -562,7 +562,7 @@ footer a {
 
 
 /* MEDIA QUERIES (LARGE) */
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1024px){
 
 
     #boxes {
